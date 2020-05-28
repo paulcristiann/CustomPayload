@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Title="Cancel orders page"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CustomPayload.CancelOrdersPage">
+    <ContentPage.Content>
+
+        <ScrollView VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+            <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+                <Label Text="CANCEL ORDERS" 
+           HorizontalOptions="Center" 
+           FontSize="Large" 
+           Padding="20"/>
+
+                <Label Text="" 
+           HorizontalOptions="Center" 
+           FontSize="Subtitle" 
+           Padding="5"
+           x:Name="coin_label"/>
+
+                <Label Text="" 
+           HorizontalOptions="Center" 
+           FontSize="Subtitle" 
+           Padding="5"
+           x:Name="type_label"/>
+
+                <Button Text="CANCEL ALL" 
+                        HorizontalOptions="CenterAndExpand"
+                        Pressed="Cancel_All_Pressed"/>
+
+                <Button Text="CANCEL LIMIT" 
+                        HorizontalOptions="CenterAndExpand"
+                        Pressed="Cancel_Limit_Pressed"/>
+
+                <Button Text="CANCEL LIMIT CLOSE" 
+                        HorizontalOptions="CenterAndExpand"
+                        Pressed="Cancel_Limit_Closed_Pressed"/>
+
+                <Button Text="CANCEL STOP" 
+                        HorizontalOptions="CenterAndExpand"
+                        Pressed="Cancel_Stop_Pressed"/>
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

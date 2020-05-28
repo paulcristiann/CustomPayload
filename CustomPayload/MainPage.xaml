@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Title="Home Page"
+xmlns:radiogroup="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CustomPayload.MainPage">
+
+    <ScrollView VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+        <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+            <Label Text="Custom Payload Sender" 
+           HorizontalOptions="Center" 
+           FontSize="Large" 
+           Padding="5" />
+
+            <Label Text="Please select a coin:" 
+           VerticalOptions="FillAndExpand" 
+           FontSize="Subtitle" 
+           Padding="5">
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="open_webhook_config"
+                        NumberOfTapsRequired="2" />
+                </Label.GestureRecognizers>
+
+            </Label>
+
+            <radiogroup:SfRadioGroup x:Name="radioGroup">
+
+
+                <radiogroup:SfRadioButton x:Name="radioButton1" Text="XBT" />
+                <radiogroup:SfRadioButton x:Name="radioButton2" Text="ETH" />
+                <radiogroup:SfRadioButton x:Name="radioButton3" Text="XRP" />
+                <radiogroup:SfRadioButton x:Name="radioButton4" Text="BCH" />
+                <radiogroup:SfRadioButton x:Name="radioButton5" Text="ADA" />
+                <radiogroup:SfRadioButton x:Name="radioButton6" Text="EOS" />
+                <radiogroup:SfRadioButton x:Name="radioButton7" Text="TRX" />
+                <radiogroup:SfRadioButton x:Name="radioButton8" Text="LTC" />
+
+
+            </radiogroup:SfRadioGroup>
+
+
+            <Label Text="Please select a payload type:" 
+           VerticalOptions="FillAndExpand" 
+           FontSize="Subtitle" 
+           Padding="5">
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                        Tapped="open_license_config"
+                        NumberOfTapsRequired="2" />
+                </Label.GestureRecognizers>
+
+            </Label>
+
+            <radiogroup:SfRadioGroup x:Name="radioGroup1">
+
+
+                <radiogroup:SfRadioButton x:Name="radioButton11" Text="SHORT" />
+                <radiogroup:SfRadioButton x:Name="radioButton22" Text="LONG" />
+
+
+            </radiogroup:SfRadioGroup>
+
+            <Button Text="Next >" 
+                HorizontalOptions="CenterAndExpand"
+                    Pressed="Button_Pressed"/>
+
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>

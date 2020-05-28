@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Title="Webhook page"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CustomPayload.WebhookPage">
+    <ContentPage.Content>
+        <ScrollView VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+            <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+                <Label Text="Webhook" 
+           HorizontalOptions="Center" 
+           FontSize="Large" 
+           Padding="5" />
+
+                <Label Text="" 
+           VerticalOptions="FillAndExpand" 
+           FontSize="Subtitle" 
+           Padding="5"
+           x:Name="webhook_label" />
+
+                <Entry Placeholder="Change webhook adress" x:Name="webhook_field" />
+
+                <Button Text="Save" 
+                HorizontalOptions="CenterAndExpand"
+                Pressed="save_webhook"
+                    />
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Title="License page"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CustomPayload.LicensePage">
+    <ContentPage.Content>
+
+        <ScrollView VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+            <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+                <Label Text="Activate License" 
+           HorizontalOptions="Center" 
+           FontSize="Large" 
+           Padding="10" />
+
+                <Label Text="Activated"
+                       TextColor="Green"
+           VerticalOptions="FillAndExpand" 
+           FontSize="Subtitle" 
+           Padding="10"
+           x:Name="license_status"/>
+
+                <Label Text=""
+                       TextColor="Green"
+           VerticalOptions="FillAndExpand" 
+           FontSize="Subtitle" 
+           Padding="10"
+           x:Name="license_key"/>
+
+                <Label Text=""
+           VerticalOptions="FillAndExpand" 
+           FontSize="Subtitle" 
+           Padding="10"
+           x:Name="device_id">
+
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer
+                        Tapped="copy_id"
+                        NumberOfTapsRequired="1" />
+                    </Label.GestureRecognizers>
+
+                </Label>
+
+                <Label Text=""
+           VerticalOptions="FillAndExpand" 
+           FontSize="Subtitle"
+           Padding="10"
+           x:Name="app_version"/>
+
+                <Entry Placeholder="Activation key" x:Name="activation_key_field"/>
+
+                <Label Text=""
+           VerticalOptions="FillAndExpand" 
+           FontSize="Subtitle" 
+           Padding="10"/>
+
+                <Button Text="Activate" 
+                HorizontalOptions="CenterAndExpand" 
+                    x:Name="license_button"
+                        Clicked="activate_license"/>
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

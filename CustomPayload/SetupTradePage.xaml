@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Setup trade" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CustomPayload.SetupTradePage">
+    <ContentPage.Content>
+        <ScrollView VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+            <StackLayout Padding="10" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Spacing="10">
+
+                <Label Text="SETUP TRADE" 
+           HorizontalOptions="Center" 
+           FontSize="Large" 
+           Padding="5"/>
+
+                <Label Text="" 
+           HorizontalOptions="Center" 
+           FontSize="Subtitle" 
+           Padding="5"
+           x:Name="coin_label"/>
+
+                <Label Text="" 
+           HorizontalOptions="Center" 
+           FontSize="Subtitle" 
+           Padding="5"
+           x:Name="type_label"/>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Entry Placeholder="Entry1" Grid.Row="0" Grid.Column="0" x:Name="entry1"/>
+                    <Entry Placeholder="Entry2" Grid.Row="0" Grid.Column="1" x:Name="entry2"/>
+                    <Entry Placeholder="Entry3" Grid.Row="1" Grid.Column="0" x:Name="entry3"/>
+                    <Entry Placeholder="Entry4" Grid.Row="1" Grid.Column="1" x:Name="entry4"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Entry Placeholder="Exit1" Grid.Row="0" Grid.Column="0" x:Name="exit1"/>
+                    <Entry Placeholder="Exit2" Grid.Row="0" Grid.Column="1" x:Name="exit2"/>
+                    <Entry Placeholder="Exit3" Grid.Row="0" Grid.Column="2" x:Name="exit3"/>
+                    <Entry Placeholder="Exit4" Grid.Row="1" Grid.Column="0" x:Name="exit4"/>
+                    <Entry Placeholder="Exit5" Grid.Row="1" Grid.Column="1" x:Name="exit5"/>
+                    <Entry Placeholder="Exit6" Grid.Row="1" Grid.Column="2" x:Name="exit6"/>
+                </Grid>
+
+                <Entry Placeholder="Stop loss" Grid.Row="1" Grid.Column="2" x:Name="stoploss"/>
+
+                <Button Text="Send >" 
+                HorizontalOptions="CenterAndExpand"
+                    Pressed="Button_Pressed"/>
+
+            </StackLayout>
+
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Title="Exit page"
+             xmlns:radiogroup="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CustomPayload.ExitPage">
+    <ContentPage.Content>
+
+        <ScrollView VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+            <StackLayout Padding="5" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+                <Label Text="EXIT" 
+           HorizontalOptions="Center" 
+           FontSize="Large" 
+           Padding="5"/>
+
+                <Label Text="" 
+           HorizontalOptions="Center" 
+           FontSize="Subtitle" 
+           Padding="5"
+           x:Name="coin_label"/>
+
+                <Label Text="" 
+           HorizontalOptions="Center" 
+           FontSize="Subtitle" 
+           Padding="5"
+           x:Name="type_label"/>
+
+                <radiogroup:SfRadioGroup x:Name="radioGroup" CheckedChanged="CheckField">
+                    <radiogroup:SfRadioButton x:Name="radioButton1" Text="Marketclose"/>
+                    <radiogroup:SfRadioButton x:Name="radioButton2" Text="Limitclose"/>
+                </radiogroup:SfRadioGroup>
+
+                <Entry Placeholder="Percentage" x:Name="percentage_entry"/>
+
+                <Label x:Name="quantity_label" Text="Please enter the quantity:" 
+           VerticalOptions="FillAndExpand" 
+           FontSize="Subtitle" 
+           Padding="5"/>
+
+                <Entry Placeholder="Quantity" x:Name="quantity_entry"/>
+
+                <Label x:Name="trail_label" Text="With Trail?" 
+           VerticalOptions="FillAndExpand" 
+           FontSize="Subtitle" 
+           Padding="5"/>
+
+                <Switch x:Name="trail_switch" IsToggled="false" HorizontalOptions="CenterAndExpand"/>
+
+                <Button Text="Send" 
+                HorizontalOptions="CenterAndExpand"
+                    Pressed="SendToWebhook"/>
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

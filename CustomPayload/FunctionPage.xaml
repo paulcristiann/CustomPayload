@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Title="Action Page"
+             xmlns:radiogroup="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CustomPayload.FunctionPage">
+    <ContentPage.Content>
+
+        <ScrollView VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+            <StackLayout Padding="5" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+
+                <Label Text="Select Action" 
+           HorizontalOptions="Center" 
+           FontSize="Large" 
+           Padding="5"/>
+
+                <Label Text="" 
+           HorizontalOptions="Center" 
+           FontSize="Subtitle" 
+           Padding="5"
+           x:Name="coin_label"/>
+
+                <Label Text="" 
+           HorizontalOptions="Center" 
+           FontSize="Subtitle" 
+           Padding="5"
+           x:Name="type_label"/>
+
+                <Label Text="Please select an action:" 
+           VerticalOptions="FillAndExpand" 
+           FontSize="Subtitle" 
+           Padding="5"/>
+
+                <radiogroup:SfRadioGroup x:Name="radioGroup">
+                    <radiogroup:SfRadioButton x:Name="radioButton1" Text="Cancel orders"/>
+                    <radiogroup:SfRadioButton x:Name="radioButton2" Text="Entry"/>
+                    <radiogroup:SfRadioButton x:Name="radioButton3" Text="Exit"/>
+                    <radiogroup:SfRadioButton x:Name="radioButton4" Text="Stop"/>
+                    <radiogroup:SfRadioButton x:Name="radioButton5" Text="Setup trade"/>
+                </radiogroup:SfRadioGroup>
+
+                <Label Text="" Padding="5"/>
+
+                <Button Text="Close Position" 
+                HorizontalOptions="CenterAndExpand"
+                    Pressed="Close_position_Pressed"/>
+
+                <Label Text="" Padding="5"/>
+
+                <Button Text="Next >" 
+                HorizontalOptions="CenterAndExpand"
+                    Pressed="Button_Pressed"/>
+
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
